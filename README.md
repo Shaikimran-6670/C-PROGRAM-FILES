@@ -1,4 +1,4 @@
-## 1.helloe world program.
+## 1.hello world program.
 ```c
 #include<stdio.h>
 int main() {
@@ -6,7 +6,22 @@ int main() {
         return 0;
 }
 ```
-## 2. even or odd number program.
+## 2. equal numbers or not program.
+```c
+#include<stdio.h>
+int main() {
+        int a,b;
+        printf("enter the numbers:");
+        scanf("%d %d",&a,&b);
+        if(a==b)
+                printf("both are equal\n");
+        else
+                printf("both are not equal\n");
+        return 0;
+}
+```
+
+## 3. even or odd number program.
 ```c
 #include<stdio.h>
 int main()
