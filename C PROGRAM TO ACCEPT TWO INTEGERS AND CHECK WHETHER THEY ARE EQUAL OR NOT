@@ -1,3 +1,4 @@
+```c
 #include<stdio.h>
 int main() {
         int a,b;
@@ -9,3 +10,4 @@ int main() {
                 printf("both are not equal\n");
         return 0;
 }
+```
