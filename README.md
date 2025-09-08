@@ -37,3 +37,17 @@ int main()
         return 0;
 }
 ```
+## 4. positive and negative numbers program.c
+```c
+#include<stdio.h>
+int main() {
+        int a;
+        printf("enter the number:");
+        scanf("%d",&a);
+        if(a>0)
+                printf("positive number\n");
+        else
+                printf("negative number\n");
+        return 0;
+}
+```
