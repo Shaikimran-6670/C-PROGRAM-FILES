@@ -37,7 +37,7 @@ int main()
         return 0;
 }
 ```
-## 4. positive and negative numbers program.c
+## 4. positive and negative numbers program.
 ```c
 #include<stdio.h>
 int main() {
@@ -48,6 +48,21 @@ int main() {
                 printf("positive number\n");
         else
                 printf("negative number\n");
+        return 0;
+}
+```
+## 5. Leap year program.
+```c
+#include<stdio.h>
+int main()
+{
+        int year;
+        printf("enter the year:");
+        scanf("%d",&year);
+        if(year%4==0)
+                printf("Leap year\n");
+        else
+                printf("Not a leap year\n");
         return 0;
 }
 ```
