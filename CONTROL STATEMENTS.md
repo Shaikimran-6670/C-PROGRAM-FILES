@@ -59,3 +59,19 @@ int main()
         return 0;
 }
 ```
+##5.C PROGRAM TO READ THE AGE OF A CANDIDATE AND DETERMINE WHETHER HE/SHE IS
+ELIGIBLE TO CAST HIS/HER OWN VOTE
+```c
+#include<stdio.h>
+int main()
+{
+        int age;
+        printf("enter the age:");
+        scanf("%d",&age);
+        if(age>=18)
+                printf("Eligible for vote\n");
+        else
+                printf("Not eligible for vote\n");
+        return 0;
+}
+```
