@@ -5,6 +5,7 @@
 int main() {
 
         int a,b;
+
         printf("enter the numbers:");
         scanf("%d %d",&a,&b);
 
@@ -137,6 +138,7 @@ int main() {
 int main() {
 
         char ch;
+
         printf("enter the cheacter:");
         scanf("%c",&ch);
 
@@ -243,6 +245,7 @@ int main() {
 int main() {
 
         char ch;
+
         printf("enter the charcter:");
         scanf("%c",&ch);
 
@@ -409,8 +412,7 @@ int main() {
 
                 return 0;
 }
-
-## 19.C PROGRAM TO FIND THE SUM OF DIGITS OF A NUMBER USING A WHILE LOOP
+## 19.C PROGRAM TO FIND THE SUM OF DIGITS OF A NUMBER USING A WHILE LOOP.
 ```c
 #include<stdio.h>
 int main()
