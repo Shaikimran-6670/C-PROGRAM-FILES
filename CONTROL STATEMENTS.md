@@ -1,4 +1,5 @@
-
+C PROGRAM TO ACCEPT TWO INTEGERS AND CHECK WHETHER THEY ARE EQUAL OR
+NOT
 ```c
 #include<stdio.h>
 int main() {
