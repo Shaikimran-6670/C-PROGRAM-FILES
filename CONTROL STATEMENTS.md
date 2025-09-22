@@ -412,8 +412,11 @@ int main() {
 
                 return 0;
 }
-## 19.C PROGRAM TO FIND THE SUM OF DIGITS OF A NUMBER USING A WHILE LOOP.
-```c
+
+
+## 19.C PROGRAM TO PRINT SUM OF DIGITS.
+```C
+
 #include<stdio.h>
 int main()
 {
