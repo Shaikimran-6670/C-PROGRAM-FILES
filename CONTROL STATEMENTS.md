@@ -1,12 +1,5 @@
-## 1.hello world program.
-```c
-#include<stdio.h>
-int main() {
-        printf("hello world\n");
-        return 0;
-}
-```
-## 2. equal numbers or not program.
+
+## 1. equal numbers or not program.
 ```c
 #include<stdio.h>
 int main() {
@@ -21,7 +14,7 @@ int main() {
 }
 ```
 
-## 3. even or odd number program.
+## 2. even or odd number program.
 ```c
 #include<stdio.h>
 int main()
@@ -37,7 +30,7 @@ int main()
         return 0;
 }
 ```
-## 4. positive and negative numbers program.
+## 3. positive and negative numbers program.
 ```c
 #include<stdio.h>
 int main() {
@@ -51,7 +44,7 @@ int main() {
         return 0;
 }
 ```
-## 5. Leap year program.
+## 4. Leap year program.
 ```c
 #include<stdio.h>
 int main()
