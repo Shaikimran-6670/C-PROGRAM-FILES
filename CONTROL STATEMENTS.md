@@ -12,7 +12,7 @@ int main() {
         return 0;
 }
 ```
-## C PROGRAM TO CHECK WHETHER A GIVEN NUMBER IS EVEN OR ODD
+## 2.C PROGRAM TO CHECK WHETHER A GIVEN NUMBER IS EVEN OR ODD
 ```c
 #include<stdio.h>
 int main()
