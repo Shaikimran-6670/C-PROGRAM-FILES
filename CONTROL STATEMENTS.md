@@ -3,9 +3,11 @@
 ```c
 #include<stdio.h>
 int main() {
+
         int a,b;
         printf("enter the numbers:");
         scanf("%d %d",&a,&b);
+
         if(a==b)
                 printf("both are equal\n");
         else
@@ -22,8 +24,10 @@ int main()
         int a;
         printf("enter the number:");
         scanf("%d",&a);
+
         if(a%2==0){
                 printf("even number\n");
+
         }       else{
                         printf("odd number\n");
         }
@@ -34,9 +38,11 @@ int main()
 ```c
 #include<stdio.h>
 int main() {
+
         int a;
         printf("enter the number:");
         scanf("%d",&a);
+
         if(a>0)
                 printf("positive number\n");
         else
@@ -52,6 +58,7 @@ int main()
         int year;
         printf("enter the year:");
         scanf("%d",&year);
+
         if(year%4==0)
                 printf("Leap year\n");
         else
@@ -62,11 +69,13 @@ int main()
 ## 5.C PROGRAM TO READ THE AGE OF A CANDIDATE AND DETERMINE WHETHER HE/SHE IS ELIGIBLE TO CAST HIS/HER OWN VOTE
 ```c
 #include<stdio.h>
+```
 int main()
 {
         int age;
         printf("enter the age:");
         scanf("%d",&age);
+
         if(age>=18)
                 printf("Eligible for vote\n");
         else
@@ -78,6 +87,7 @@ int main()
 ```c
 #include<stdio.h>
 int main() {
+
         int m,n;
         scanf("%d",&m);
         if (m>0)
@@ -97,13 +107,17 @@ int main() {
 ```c
 #include<stdio.h>
 int main() {
+
         int a,b,c;
         printf("enter the number:");
         scanf("%d %d %d",&a,&b,&c);
+
         if(a>=b && a>=c){
                 printf("%d is the big number\n",a);
+
         }else if (b>=a && b>=c){
                 printf("%d is the big number\n",b);
+
         }else{
                 printf("%d is the big number\n",c);
         }
@@ -111,4 +125,7 @@ int main() {
         return 0;
 }
 ```
+## 8.C PROGRAM TO CHECK WHETHER A CHARACTER IS A VOWEL OR CONSONANT
+```c
+#include<stdio.h>
 
