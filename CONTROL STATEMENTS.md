@@ -73,7 +73,6 @@ int main()
 ## 5.C PROGRAM TO READ THE AGE OF A CANDIDATE AND DETERMINE WHETHER HE/SHE IS ELIGIBLE TO CAST HIS/HER OWN VOTE
 ```c
 #include<stdio.h>
-```
 int main()
 {
         int age;
