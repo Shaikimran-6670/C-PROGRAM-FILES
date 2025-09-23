@@ -439,3 +439,361 @@ int main()
         return 0;
 }
 ```
+## 20.C PROGRAM TO PRINT FIBONACCI SERIES UP TO N TERMS USING A FOR LOOP
+```c
+#include<stdio.h>
+int main() {
+        int count=2,n;
+        int i,a=0,b=1,next;
+        printf("enter the terms:");
+        scanf("%d",&n);
+
+        printf("fibanocci series:\n");
+
+        if(n>=1)
+                printf("%d\n",a);
+        if(n>=2)
+                printf("%d\n",b);
+        while(count<n) {
+                next=a+b;
+        printf("%d\n",next);
+         a=b;
+         b=next;
+         count++;
+        }
+        return next;
+}
+```
+## 21.C PROGRAM TO REVERSE A GIVEN NUMBER USING A WHILE LOOP
+```c
+#include<stdio.h>
+int main()
+{
+        long long int i,num,reverse=0,original;
+
+        printf("enter the number:");
+        scanf("%lld",&num);
+
+        i=0;
+        while(num>0) {
+
+           original = num % 10;
+
+           reverse = reverse * 10 + original;
+
+           num = num / 10;
+        }
+        printf("%lld",reverse);
+
+        return 0;
+}
+```
+## 22.C PROGRAM TO FIND THE LARGEST ELEMENT IN AN ARRAY USING A FOR LOOP
+```c
+#include<stdio.h>
+int main()
+{
+        int i;
+       int arr[10],large;
+
+        printf("enter the values:");
+        for(i=0;i<5;i++)
+        scanf("%d",&arr[i]);
+
+        large=arr[5];
+
+        for(i=0;i<5;i++)
+
+                if(arr[i]>large)
+
+                        large=arr[i];
+
+        printf("the largest element is:%d\n",large);
+
+        return 0;
+}
+```
+## 23.C PROGRAM TO FIND THE SMALLEST ELEMENT IN AN ARRAY USING A WHILE LOOP
+```c
+#include<stdio.h>
+int main()
+{
+        int arr[10];
+        int i,small;
+        printf("enter the values:");
+        for(i=0;i<5;i++) {
+                scanf("%d",&arr[i]);
+        }
+        small=arr[0];
+        for(i=0;i<5;i++) {
+                if(arr[i]<small)
+                        small=arr[i];
+        }
+        printf("the smallest element is:%d\n",small);
+        return 0;
+}
+```
+## 24.C PROGRAM TO PRINT ALL THE ELEMENTS OF AN ARRAY USING A FOR LOOP
+```c
+#include<stdio.h>
+int main()
+{
+        int arr[10];
+        int i;
+
+        printf("enter the element:");
+
+        for(i=0;i<10;i++){
+                scanf("%d",&arr[i]);
+        }
+        for(i=0;i<10;i++)
+                        printf("%d\n",arr[i]);
+
+        return 0;
+}
+```
+## 25.C PROGRAM TO FIND THE SUM OF ELEMENTS IN AN ARRAY USING A WHILE LOOP
+```c
+#include<stdio.h>
+int main() {
+        int arr[5],i,sum=0;
+        printf("enter the array:");
+        for(i=0;i<5;i++){
+                scanf("%d",&arr[i]);
+        }
+        for(i=0;i<5;i++)
+
+        while(i<5){
+                sum=sum+arr[i];
+                i++;
+
+        }
+        printf("the sum of all elements is:%d\n",sum);
+
+}
+```
+## 26.C PROGRAM TO COUNT THE NUMBER OF VOWELS IN A GIVEN STRING USING A FOR LOOP.
+```c
+#include<stdio.h>
+#include<string.h>
+int main() {
+
+        char str[100];
+        int i,count=0;
+
+        printf("enter the string:");
+
+        fgets(str,100,stdin);
+
+        str[strcspn(str,"\n")]='\0';
+
+        for(i=0;str[i]!='\0';i++){
+
+        if((str[i]=='a' || str[i]=='e' || str[i]=='i' || str[i]=='o' || str[i]=='u') ||
+            (str[i]=='A' || str[i]=='E' || str[i]=='I' || str[i]=='O' || str[i]=='U'))
+                count++;
+        }
+
+
+        printf("the number of vowels are:%d\n",count);
+        return 0;
+}
+```
+## 27.C PROGRAM TO COUNT THE NUMBER OF WORDS IN A GIVEN STRING USING A WHILE LOOP
+```c
+#include<stdio.h>
+#include<string.h>
+
+int main() {
+        char str[100];
+        int i=0,count=1;
+        printf("enter the string:");
+        fgets(str,sizeof(str),stdin);
+        str[strcspn(str,"\n")]='\0';
+
+        while(str[i]!='\0'){
+                if(str[i]==' '||str[i]=='\n'&& str[i]!='\0')
+
+                        count++;
+                        i++;
+        }
+
+                     printf("the number of words are:%d\n",count);
+
+        return 0;
+}
+```
+## 28.C PROGRAM TO CHECK WHETHER A GIVEN STRING IS A PALINDROME OR NOT USING A FOR LOOP.
+```c
+
+#include <stdio.h>
+#include<string.h>
+
+int main() {
+        char str[100];
+        int i,len,flag=1;
+
+        printf("enter the  string:");
+        scanf("%s",str);
+
+        len= strlen(str);
+
+        for(i=0;i < len/2;i++) {
+        if(str[i] != str[len-1-i]) {
+                        flag=0;
+                        break;
+                }
+        }
+        if(flag)
+                printf("palindrome\n");
+        else
+                printf("not palindrome\n");
+        return 0;
+}
+```
+## 29.A C PROGRAM TO CONCATENATE TWO STRINGS WITHOUT USING LIBRARY FUNCTIONS USING A WHILE LOOP.
+```c
+
+#include <stdio.h>
+#include<string.h>
+
+int main() {
+        char str[100];
+        int i,len,flag=1;
+
+        printf("enter the  string:");
+        scanf("%s",str);
+
+        len= strlen(str);
+
+        for(i=0;i < len/2;i++) {
+        if(str[i] != str[len-1-i]) {
+
+                        flag=0;
+                        break;
+                }
+        }
+        if(flag)
+                printf("palindrome\n");
+        else
+                printf("not palindrome\n");
+        return 0;
+}
+```
+## 30.C PROGRAM TO FIND THE LENGTH OF A STRING USING A FOR LOOP
+```c
+#include<stdio.h>
+#include<string.h>
+
+int main() {
+
+        char str[100];
+        int i=0,count=1;
+
+        printf("enter the string:");
+        fgets(str,sizeof(str),stdin);
+        str[strcspn(str,"\n")]='\0';
+
+        while(str[i]!='\0'){
+                if(str[i]==' '||str[i]=='\n'&& str[i]!='\0')
+
+                        count++;
+                        i++;
+        }
+
+                     printf("the number of words are:%d\n",count);
+
+        return 0;
+}
+
+```
+## 31.C PROGRAM TO CONVERT A STRING TO UPPERCASE USING A WHILE LOOP.
+```c
+#include<stdio.h>
+#include<string.h>
+
+int main() {
+        char str[100];
+        int i=0;
+
+        printf("enter the string:");
+
+        fgets(str,sizeof(str),stdin);
+
+        str[strcspn(str,"\n")] ='\0';
+
+        while(str[i] != '\0') {
+
+                if(str[i]>= 'a' && str[i]<= 'z')
+
+                str[i] = str[i] - 32;
+                i++;
+        }
+
+        printf("%s",str);
+        return 0;
+}
+```
+## 32.C PROGRAM TO FIND THE POWER OF A NUMBER USING A FOR LOOP
+```c
+#include<stdio.h>
+#include<string.h>
+
+int main() {
+
+        long long int i,base;
+        long long int result=1,exponent;
+
+        printf("enter the base:");
+        scanf("%lld",&base);
+
+        printf("enter the exponent:");
+        scanf("%lld",&exponent);
+
+        for(i=1;i<=exponent;i++) {
+                result = result * base;
+
+        }
+
+        printf("%lld^%lld = %lld\n",base,exponent,result);
+        return 0;
+}
+```
+## 33.C PROGRAM TO FIND THE FACTORIAL OF A NUMBER USING A WHILE LOOP.
+```c
+#include<stdio.h>
+int main() {
+        int i,n;
+        int fact=1;
+        printf("enter the number:");
+        scanf("%d",&n);
+        for(i=1;i<=n;i++){
+                fact=fact*i;
+        }
+        printf("%d",fact);
+        return 0;
+}
+```
+## 34.C PROGRAM TO FIND THE GCD OF TWO NUMBERS USING A WHILE LOO.
+```c
+#include<stdio.h>
+
+int main()
+{
+        int a,b;
+
+        printf("enter two numbers:");
+        scanf("%d %d",&a,&b);
+
+        while(a != b) {
+          if(a>b)
+                a=a-b;
+        else
+                b=b-a;
+        }
+        printf("GCD is:%d\n",a);
+        return 0;
+}
+```
+## 35.A C PROGRAM TO FIND THE LCM OF TWO NUMBERS USING A FOR LOOP.
+```c
