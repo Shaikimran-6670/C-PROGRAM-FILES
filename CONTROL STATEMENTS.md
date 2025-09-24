@@ -764,8 +764,10 @@ int main() {
 int main() {
         int i,n;
         int fact=1;
+
         printf("enter the number:");
         scanf("%d",&n);
+
         for(i=1;i<=n;i++){
                 fact=fact*i;
         }
@@ -773,7 +775,7 @@ int main() {
         return 0;
 }
 ```
-## 34.C PROGRAM TO FIND THE GCD OF TWO NUMBERS USING A WHILE LOO.
+## 34.C PROGRAM TO FIND THE GCD OF TWO NUMBERS USING A WHILE LOOP.
 ```c
 #include<stdio.h>
 
@@ -795,4 +797,52 @@ int main()
 }
 ```
 ## 35.A C PROGRAM TO FIND THE LCM OF TWO NUMBERS USING A FOR LOOP.
+```c#include<stdio.h>
+
+void  main()
+{
+        int a,b,i=2,lcm;
+
+        printf("enter the two numbers:");
+        scanf("%d %d",&a,&b);
+
+        for((a>b ? a:b); ;i++) {
+
+                if(i % a==0 && i % b==0) {
+
+                        lcm = i;
+                        break;
+
+                }
+        }
+
+
+        printf("LCM of %d and %d is:%d\n",a,b,lcm);
+
+
+}
+```
+## 36.C PROGRAM TO PRINT THE MULTIPLICATION TABLE OF A GIVEN NUMBER USING A FOR LOOP.
 ```c
+#include<stdio.h>
+
+int main()
+{
+        int i,n,table;
+
+        printf("enter the number:");
+        scanf("%d",&n);
+
+        for(i=1;i<=10;i++) {
+
+                table =n * i;
+
+        printf("%d x %d = %d\n",n,i,table);
+        }
+
+        return 0;
+}
+```
+## 37.PROGRAM IN C TO PRINT THE ARMSTRONG NUMBERS BETWEEN 1 AND 1000 USING A FOR LOOP.
+```c
+
