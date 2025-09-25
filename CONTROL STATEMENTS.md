@@ -797,7 +797,8 @@ int main()
 }
 ```
 ## 35.A C PROGRAM TO FIND THE LCM OF TWO NUMBERS USING A FOR LOOP.
-```c#include<stdio.h>
+```c
+#include<stdio.h>
 
 void  main()
 {
