@@ -960,3 +960,41 @@ int main() {
         return 0;
 }
 ```
+## 42.PROGRAM IN C TO REMOVE DUPLICATE ELEMENTS FROM AN ARRAY USING LOOPS AND IF-ELSE STATEMENTS.
+```c
+#include<stdio.h>
+
+int main()
+{
+        int arr[100],visited[100]={0};
+        int i,j,count;
+
+        printf("enter the numbers:");
+
+
+        for(i=0;i<5;i++) {
+
+                scanf("%d",&arr[i]);
+        }
+
+        for(i=0;i<5;i++) {
+
+                if(visited[i]==0)
+
+                        count=1;
+                for(j=i+1;j<5;j++) {
+
+                        if(arr[i]==arr[j]) {
+
+                                count++;
+                                visited[j]=1;
+                        }
+                }
+
+                if(count==1)
+
+                        printf("%d\n",arr[i]);
+        }
+        return 0;
+}
+```
