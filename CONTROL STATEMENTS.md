@@ -846,4 +846,82 @@ int main()
 ```
 ## 37.PROGRAM IN C TO PRINT THE ARMSTRONG NUMBERS BETWEEN 1 AND 1000 USING A FOR LOOP.
 ```c
+#include<stdio.h>
 
+int main()
+{
+        int i,temp,sum=0,digit;
+
+        printf("the armstrong numbers are:\n");
+
+
+        for(i=1;i<=1000;i++) {
+
+                sum = 0;
+                temp = i;
+
+
+                while(temp > 0) {
+
+                        digit = temp % 10;
+
+                        sum = sum + (digit *digit * digit);
+
+                        temp = temp / 10;
+        }
+
+        if(sum == i) {
+
+                printf("%d\n",i);
+        }
+        }
+
+        return 0;
+}
+```
+## 38.A PROGRAM IN C TO IMPLEMENT A SIMPLE CALCULATOR USING SWITCH-CASE STATEMENTS.
+```c
+#include<stdio.h>
+int main()
+
+{
+        int a,b;
+        char op;
+
+        printf("enter the numbers:");
+
+
+        scanf("%d %d",&a,&b);
+
+        printf("enter the oeprator:+,-,*,/,%%:");
+
+        scanf(" %c",&op);
+
+        switch(op) {
+
+                case '+':
+                        printf("%d",a+b);
+                        break;
+
+                case '-':
+                         printf("%d",a-b);
+                        break;
+
+                case '*':
+                         printf("%d",a*b);
+                        break;
+
+                case '/':
+                         printf("%d",a/b);
+                        break;
+
+                case '%':
+                         printf("%d",a%b);
+                         break;
+        default;
+printf("invlaid operator\n");
+}
+
+return 0;
+}
+```
