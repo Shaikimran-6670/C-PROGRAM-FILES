@@ -925,3 +925,38 @@ printf("invlaid operator\n");
 return 0;
 }
 ```
+## 39.PROGRAM IN C TO CHECK WHETHER A GIVEN NUMBER IS A PALINDROME OR NOT USING WHILE LOOPS AND IF-ELSE STATEMENTS.
+```c
+#include<stdio.h>
+
+int main() {
+
+        int num,reverse=0,digit;
+
+        int original;
+
+        printf("enter the number:");
+        scanf("%d",&num);
+
+        original = num;
+
+        for( ;num >0;) {
+
+                digit=num%10;
+
+                reverse = reverse*10+digit;
+
+                num= num/10;
+        }
+        if(original == reverse)
+
+                printf("%d is palindrome\n",original);
+
+        else
+
+                printf("%d is not palindrome\n",original);
+
+
+        return 0;
+}
+```
