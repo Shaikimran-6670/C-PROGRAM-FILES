@@ -918,7 +918,7 @@ int main()
                 case '%':
                          printf("%d",a%b);
                          break;
-        default;
+        default:
 printf("invlaid operator\n");
 }
 
