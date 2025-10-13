@@ -1054,4 +1054,49 @@ int main()
         return 0;
 }
 ```
+## 55.PROGRAM IN C TO CHECK WHETHER TWO ARRAYS ARE EQUAL OR NOT USING LOOPS AND IF-ELSE STATEMENTS.
+```c
+#include<stdio.h>
 
+int main()
+{
+
+        int arr1[100],arr2[100];
+
+        int i,n;
+
+        printf("enter the number of elements:");
+
+        scanf("%d",&n);
+
+        printf("enter the %d elements of first array:",n);
+
+        for(i=0;i<n;i++) {
+
+                scanf("%d",&arr1[i]);
+        }
+
+        printf("enter the %d elements of second array:",n);
+
+        for(i=0;i<n;i++) {
+
+                scanf("%d",&arr2[i]);
+        }
+
+        for(i=0;i<n;i++) {
+
+                if(arr1[i] != arr2[i]) {
+
+                        printf("the elements are not equal\n");
+
+                return 0;
+
+                }
+        }
+
+                       printf("the elememnts are equal\n");
+
+      return 0;
+
+}
+```
