@@ -998,3 +998,60 @@ int main()
         return 0;
 }
 ```
+## 48.C PROGRAM TO PRINT ALL THE ODD NUMBERS BETWEEN 1 TO 50 USING A FOR LOOP.
+```c
+#include<stdio.h>
+
+int main()
+{
+        int i;
+
+                printf("the odd numbers from 1 to 50 are:\n");
+
+        for(i=1;i<=50;i++) {
+
+                if(i%2!=0)
+
+
+                printf("%d\n",i);
+
+
+        }
+        return 0;
+}
+```
+## 54.A PROGRAM IN C TO PRINT THE ELEMENTS OF AN ARRAY IN REVERSE ORDER USING LOOPS AND IF-ELSE STATEMENTS.
+```c
+#include<stdio.h>
+
+int main()
+{
+        int arr[100];
+
+        int i,n;
+
+        printf("enter the number of elements:");
+
+        scanf("%d",&n);
+
+        printf("enter the %d elements:",n);
+
+        for(i=0;i<n;i++) {
+
+                scanf("%d",&arr[i]);
+
+        }
+
+        printf("the reverse mode of elements are:\n");
+
+        for(i=n-1;i>=0;i--) {
+
+
+                        printf("%d\n",arr[i]);
+
+        }
+
+        return 0;
+}
+```
+
