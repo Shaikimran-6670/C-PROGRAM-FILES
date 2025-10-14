@@ -960,6 +960,122 @@ int main() {
         return 0;
 }
 ```
+## 40.PROGRAM IN C TO FIND THE SUM OF ELEMENTS IN THE LOWER TRIANGULAR  MATRIX USING LOOPS AND IF-ELSE STATEMENTS.
+```c
+#include<stdio.h>
+
+int main()
+{
+        int arr[3][3];
+
+        int i,j,sum=0;
+
+        printf("enter the array elements:");
+
+        for(i=0;i<3;i++) {
+
+                for(j=0;j<3;j++) {
+
+                        scanf("%d",&arr[i][j]);
+
+                }
+        }
+
+        printf("the matrix is\n");
+
+        for(i=0;i<3;i++) {
+
+                for(j=0;j<3;j++) {
+
+                        printf("%d\t",arr[i][j]);
+
+                }
+
+
+        printf("\n");
+        }
+
+        printf("the lower traingular is:\n");
+
+        for(i=0;i<3;i++) {
+
+                for(j=0;j<3;j++) {
+
+                        if(i>=j) {
+
+                                printf("%d\t",arr[i][j]);
+
+                                sum+=arr[i][j];
+                        }
+
+                }
+                        printf("\n");
+        }
+
+        printf("%d",sum);
+
+        return 0;
+}
+
+```
+## 41.PROGRAM IN C TO FIND THE SUM OF ELEMENTS IN THE UPPER TRIANGULAR  MATRIX USING LOOPS AND IF-ELSE STATEMENTS.
+```c
+#include<stdio.h>
+
+int main()
+{
+        int arr[3][3];
+
+        int i,j,sum=0;
+
+        printf("enter the array elements:");
+
+        for(i=0;i<3;i++) {
+
+                for(j=0;j<3;j++) {
+
+                        scanf("%d",&arr[i][j]);
+
+                }
+        }
+
+        printf("the matrix is\n");
+
+        for(i=0;i<3;i++) {
+
+                for(j=0;j<3;j++) {
+
+                        printf("%d\t",arr[i][j]);
+
+                }
+
+
+        printf("\n");
+        }
+
+        printf("the lower traingular is:\n");
+
+        for(i=0;i<3;i++) {
+
+                for(j=0;j<3;j++) {
+
+                        if(i<=j) {
+
+                                printf("%d\t",arr[i][j]);
+
+                                sum+=arr[i][j];
+                        }
+
+                }
+                        printf("\n");
+        }
+
+        printf("%d",sum);
+
+        return 0;
+}
+
+```
 ## 42.PROGRAM IN C TO REMOVE DUPLICATE ELEMENTS FROM AN ARRAY USING LOOPS AND IF-ELSE STATEMENTS.
 ```c
 #include<stdio.h>
@@ -970,8 +1086,6 @@ int main()
         int i,j,count;
 
         printf("enter the numbers:");
-
-
         for(i=0;i<5;i++) {
 
                 scanf("%d",&arr[i]);
@@ -998,6 +1112,196 @@ int main()
         return 0;
 }
 ```
+## 43.PROGRAM IN C TO SORT AN ARRAY OF INTEGERS IN ASCENDING ORDER USING LOOPS AND IF-ELSE STATEMENTS.
+```c
+#include<stdio.h>
+
+int main()
+{
+        int i,j,n,temp;
+        int arr[100];
+
+        printf("enter the number of the elements:");
+        scanf("%d",&n);
+
+
+
+                printf("enter %d integers\n",n);
+
+                                 for(i=0;i<n;i++) {
+
+                                         scanf("%d",&arr[i]);
+                                 }
+
+                                         for(i=0;i<n;i++) {
+
+                                                 for(j=i+1;j<n;j++) {
+
+                                                         if(arr[i] > arr[j]) {
+
+                                                                  temp = arr[i];
+
+                                                                  arr[i] = arr[j];
+
+                                                                  arr[j] = temp;
+                                                         }
+                                                 }
+                                         }
+
+                                                 printf("ascending order is\n");
+
+                                                 for(i=0;i<n;i++) {
+
+                                                         printf("%d\n",arr[i]);
+                                                 }
+
+
+                                         return 0;
+}
+                    
+```
+## 44..WRITE A PROGRAM IN C TO SORT AN ARRAY OF INTEGERS IN DESCENDING ORDER USING LOOPS AND IF-ELSE STATEMENTS.
+```c
+#include<stdio.h>
+
+int main()
+{
+        int i,j,n,temp;
+        int arr[100];
+
+        printf("enter the number of the elements:");
+        scanf("%d",&n);
+
+
+
+                printf("enter %d integers\n",n);
+
+                                 for(i=0;i<n;i++) {
+
+                                         scanf("%d",&arr[i]);
+                                 }
+
+                                         for(i=0;i<n;i++) {
+
+                                                 for(j=i+1;j<n;j++) {
+
+                                                         if(arr[i] < arr[j]) {
+
+                                                                  temp = arr[i];
+
+                                                                  arr[i] = arr[j];
+
+                                                                  arr[j] = temp;
+                                                         }
+                                                 }
+                                         }
+
+                                                 printf("Descending order is\n");
+
+                                                 for(i=0;i<n;i++) {
+
+                                                         printf("%d\n",arr[i]);
+                                                 }
+
+
+                                         return 0;
+}
+```
+## 45.A PROGRAM IN C TO FIND THE SECOND LARGEST ELEMENT IN AN ARRAY USING LOOPS AND IF-ELSE STATEMENTS.
+```c
+#include<stdio.h>
+
+int main()
+{
+        int arr[100];
+        int i,big,n,second;
+
+        printf("enter the number of elements:\n");
+
+        scanf("%d",&n);
+
+        printf("enter %d elemnets:",n);
+
+        for(i=0;i<n;i++) {
+
+                scanf("%d",&arr[i]);
+        }
+
+        big= 0;
+
+        second = 0;
+
+         for (i=0;i<n;i++) {
+
+                    if(arr[i] > big)  {
+
+
+                            second = big;
+
+                            big = arr[i];
+
+                    } else if(arr[i] > second && arr[i] !=big ) {
+
+                            second = arr[i];
+
+                    }
+            }
+
+        printf("the second largest element is:%d",second);
+
+          printf("\n");
+
+        return 0;
+
+
+}
+```
+## 46.PROGRAM IN C TO FIND THE FREQUENCY OF EACH ELEMENT IN AN ARRAY USING LOOPS AND IF-ELSE STATEMENTS.
+```c
+#include<stdio.h>
+
+int main ()
+{
+        int arr[100],visited[10]={0};
+
+        int i,n,count,j;
+
+        printf("enter the number of the elements:");
+
+        scanf("%d",&n);
+
+        printf("enter the elemnets:");
+
+        for(i=0;i<n;i++) {
+
+                scanf("%d",&arr[i]);
+
+        }
+
+        for(i=0;i<n;i++) {
+
+                if(visited[i] == 1)
+
+           continue ;
+                 count =1;
+
+                 for(j=i+1;j<n;j++) {
+
+                   if(arr[i] == arr[j]) {
+
+                count++;
+
+                visited[j]=1;
+
+                     }
+               }
+
+        printf("%d->%d\n",arr[i],count);
+        }
+
+        return 0;
+}
+```
 ## 48.C PROGRAM TO PRINT ALL THE ODD NUMBERS BETWEEN 1 TO 50 USING A FOR LOOP.
 ```c
 #include<stdio.h>
@@ -1011,7 +1315,6 @@ int main()
         for(i=1;i<=50;i++) {
 
                 if(i%2!=0)
-
 
                 printf("%d\n",i);
 
