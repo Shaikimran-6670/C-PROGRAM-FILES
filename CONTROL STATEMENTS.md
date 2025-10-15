@@ -1323,6 +1323,67 @@ int main()
         return 0;
 }
 ```
+## 49.PROGRAM IN C TO FIND THE SUM OF ELEMENTS IN EACH COLUMN OF A MATRIX USING LOOPS AND IF-ELSE STATEMENTS.
+```c
+#include<stdio.h>
+
+
+int main()
+{
+        int arr[10][10];
+
+        int i,j,sc,rows,cols;
+
+        printf("enter the row:");
+        scanf("%d",&rows);
+
+        printf("enter the columns:");
+        scanf("%d",&cols);
+
+        printf("enter the array elemnets:\n");
+
+        for(i=0;i<rows;i++) {
+
+                for(j=0;j<cols;j++) {
+
+                        scanf("%d",&arr[i][j]);
+
+                }
+        }
+
+        printf("the matrix is:\n");
+
+        for(i=0;i<rows;i++) {
+
+                for(j=0;j<cols;j++) {
+
+                        printf("%d\t",arr[i][j]);
+                }
+
+                printf("\n");
+        }
+
+        for(i=0;i<rows;i++) {
+                sc=0;
+
+                for(j=0;j<cols;j++) {
+
+
+                        sc+=arr[i][j];
+
+                }
+
+        printf("the sum of column %d:%d \n",i+1,sc);
+        }
+
+        return 0;
+}
+
+```
+## 50.PROGRAM IN C TO FIND THE SUM OF ELEMENTS IN EACH ROW OF A MATRIX USING LOOPS AND IF-ELSE STATEMENTS.
+```c
+
+```
 ## 54.A PROGRAM IN C TO PRINT THE ELEMENTS OF AN ARRAY IN REVERSE ORDER USING LOOPS AND IF-ELSE STATEMENTS.
 ```c
 #include<stdio.h>
