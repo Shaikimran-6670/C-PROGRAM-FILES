@@ -1439,7 +1439,197 @@ int main()
 }
 ```
 ## 51.PROGRAM IN C TO ADD TWO MATRICES USING LOOPS AND IF-ELSE STATEMENTS.
+```c
+#include<stdio.h>
 
+int main()
+{
+        int sum[10][10],a[10][10],b[10][10];
+
+        int i,j,row,col;
+
+        printf("enter the row size and column  size:");
+        scanf("%d %d",&row,&col);
+
+        printf("enter the first matrice elements:");
+
+        for(i=0;i<row;i++) {
+                for(j=0;j<col;j++) {
+        scanf("%d",&a[i][j]);
+                }
+        }
+
+        printf("enter the second matrice elements:");
+
+        for(i=0;i<row;i++) {
+                for(j=0;j<col;j++) {
+        scanf("%d",&b[i][j]);
+                }
+        }
+
+
+
+        printf("the two matrices are:\n");
+
+
+        for(i=0;i<row;i++) {
+
+                for(j=0;j<col;j++) {
+
+                        printf("%d\t",a[i][j]);
+
+                }
+
+        printf("\n");
+        }
+
+        printf("-----------------------\n");
+
+        for(i=0;i<row;i++) {
+                for(j=0;j<col;j++) {
+                        printf("%d\t",b[i][j]);
+                }
+                printf("\n");
+        }
+        printf("-----after adding matrices-----\n");
+
+        for(i=0;i<row;i++) {
+                for(j=0;j<col;j++) {
+
+                        sum[i][j] = a[i][j] + b[i][j];
+
+                printf("%d\t",sum[i][j]);
+           }
+                printf("\n");
+        }
+
+
+
+        return 0;
+}
+```
+## 52.PROGRAM IN C TO SUBTRACT TWO MATRICES USING LOOPS AND IF-ELSE STATEMENTS.
+```c
+#include<stdio.h>
+
+int main()
+{
+        int sub[10][10],a[10][10],b[10][10];
+
+        int row,col,i,j;
+
+        printf("enter the row and column size:");
+        scanf("%d %d",&row,&col);
+
+          printf("enter the first matrice:\n");
+
+        for(i=0;i<row;i++) {
+                for(j=0;j<col;j++) {
+
+                  scanf("%d",&a[i][j]);
+
+                }
+        }
+
+        printf("enter the second matrice:\n");
+            for(i=0;i<row;i++) {
+                for(j=0;j<col;j++) {
+
+                        scanf("%d",&b[i][j]);
+                }
+
+        }
+
+        printf("the two matrices are\n");
+
+        for(i=0;i<row;i++) {
+                for(j=0;j<col;j++) {
+
+                        printf("%d\t",a[i][j]);
+                }
+                printf("\n");
+        }
+
+
+           printf("--------------------\n");
+
+        for(i=0;i<row;i++) {
+                for(j=0;j<col;j++) {
+
+                        printf("%d\t",b[i][j]);
+                }
+                printf("\n");
+        }
+
+        printf("-----after the subtraction the matrices-----\n");
+
+        for(i=0;i<row;i++) {
+                for(j=0;j<col;j++) {
+
+                        sub[i][j] = a[i][j] - b[i][j];
+
+                        printf("%d\t",sub[i][j]);
+                }
+                printf("\n");
+        }
+        return 0;
+}
+```
+## 53.PROGRAM IN C TO MULTIPLY TWO MATRICES USING LOOPS AND IF-ELSE STATEMENTS.
+```c
+#include<stdio.h>
+
+int main()
+{
+        int mult[10][10],a[10][10],b[10][10];
+        int i,j,row,col;
+
+        printf("enter the size of row and column:");
+        scanf("%d %d",&row,&col);
+
+        printf("enter the first matrice:\n");
+
+        for(i=0;i<row;i++) {
+                for(j=0;j<col;j++) {
+
+                        scanf("%d",&a[i][j]);
+                }
+        }
+        printf("enter the second matrice:\n");
+
+        for(i=0;i<row;i++) {
+                for(j=0;j<col;j++) {
+                        scanf("%d",&b[i][j]);
+                }
+        }
+        printf("the matrices are\n");
+
+        for(i=0;i<row;i++) {
+                for(j=0;j<col;j++) {
+                        printf("%d\t",a[i][j]);
+                }
+                printf("\n");
+        }
+        printf("-----------------\n");
+        for(i=0;i<row;i++) {
+                for(j=0;j<col;j++) {
+                        printf("%d\t",b[i][j]);
+                }
+                printf("\n");
+        }
+        printf("-----after the multiplication of matrices-----\n");
+        for(i=0;i<row;i++) {
+                for(j=0;j<col;j++) {
+
+                        mult[i][j] = a[i][j] * b[i][j];
+
+                        printf("%d\t",mult[i][j]);
+                }
+                printf("\n");
+        }
+        return 0;
+}
+```
 ## 54.A PROGRAM IN C TO PRINT THE ELEMENTS OF AN ARRAY IN REVERSE ORDER USING LOOPS AND IF-ELSE STATEMENTS.
 ```c
 #include<stdio.h>
