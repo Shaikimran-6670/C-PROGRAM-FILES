@@ -86,8 +86,76 @@ int main()
 ```
 ## 4. program in C to copy the elements of one array into another array.
 ```c
+nclude<stdio.h>
 
-5. Write a program in C to count the total number of duplicate elements in an array.
+int main()
+{
+        int a[100],b[100];
+        int i,n;
+
+        printf("enter the number of elements:");
+        scanf("%d",&n);
+
+        printf("enter %d elements:\n",n);
+
+        for(i=0;i<n;i++) {
+                scanf("%d",&a[i]);
+        }
+
+        printf("-----after copying elements-----\n");
+
+        for(i=0;i<n;i++) {
+
+                b[i] = a[i];
+
+                printf("%d\t",b[i]);
+        }
+
+        return 0;
+}
+
+```
+
+## 5.Program in C to count the total number of duplicate elements in an array.
+```c
+include<stdio.h>
+
+int main()
+{
+        int arr[100],visit[100]={0};
+
+        int i,j,count=0,n;
+
+        printf("enter the number of the elements:");
+        scanf("%d",&n);
+
+        printf("enter %d elements:",n);
+
+        for(i=0;i<n;i++) {
+                scanf("%d",&arr[i]);
+                for(j=0;j<n;j++) {
+                        }
+        }
+
+        for(i=0;i<n;i++) {
+                if(visit[i]==0) {
+                        for(j=i+1;j<n;j++) {
+                                if(arr[i]==arr[j]) {
+
+                                        count++;
+
+                                        visit[j]=1;
+
+                                }
+                        }
+
+                }
+        }
+          printf("\n Number of Duplicates are=%d\n",count);
+
+        return 0;
+}
+```
 6. Write a program in C to print all unique elements in an array.
 7. Write a program in C to merge two arrays of the same size sorted in descending order.
 8. Write a program in C to count the frequency of each element of an array.
