@@ -156,8 +156,51 @@ int main()
         return 0;
 }
 ```
-6. Write a program in C to print all unique elements in an array.
-7. Write a program in C to merge two arrays of the same size sorted in descending order.
+## 6. Program in C to print all unique elements in an array.
+```c
+#include<stdio.h>
+
+int main()
+{
+        int arr[100];
+        int i,j,n,count;
+
+        printf("enter the number of the elements:");
+        scanf("%d",&n);
+
+        printf("enter %d elemnets:",n);
+
+        for(i=0;i<n;i++) {
+                 scanf("%d",&arr[i]);
+                for(j=0;j<n;j++) {
+
+                }
+        }
+
+        printf("-----the unique elements are-----\n");
+
+        for(i=0;i<n;i++) {
+
+                count=0;
+
+                for(j=0;j<n;j++) {
+
+                        if(arr[i] == arr[j] && i!=j)
+
+                        count++;
+
+                }
+                if(count ==0)
+        printf("%d\n",arr[i]);
+
+           }
+
+        return 0;
+        }
+```
+## 7. Program in C to merge two arrays of the same size sorted in descending order.
+```c
+
 8. Write a program in C to count the frequency of each element of an array.
 9. Write a program in C to find the maximum and minimum elements in an array
 10. Write a program in C to separate odd and even integers into separate arrays.
