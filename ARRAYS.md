@@ -200,13 +200,306 @@ int main()
 ```
 ## 7. Program in C to merge two arrays of the same size sorted in descending order.
 ```c
+#include<stdio.h>
 
-8. Write a program in C to count the frequency of each element of an array.
-9. Write a program in C to find the maximum and minimum elements in an array
-10. Write a program in C to separate odd and even integers into separate arrays.
-11. Write a program in C to sort elements of an array in ascending order
-12. Write a program in C to sort the elements of the array in descending order
-13. Write a program in C to delete an element at a desired position from an array.
+int main()
+{
+        int a[100],b[100],merge[200];
+
+        int i,j,n,temp;
+
+        printf("enter the size of each array elements:");
+        scanf("%d",&n);
+
+        printf("enter %d elements of first array:",n);
+        for(i=0;i<n;i++) {
+                scanf("%d",&a[i]);
+        }
+
+        printf("enter %d elements of second array:",n);
+        for(i=0;i<n;i++) {
+                scanf("%d",&b[i]);
+        }
+
+        for(i=0;i<n;i++) {
+                merge[i] = a[i];
+        }
+        for(i=0;i<n;i++) {
+                merge[n+i] = b[i];
+        }
+
+        for(i=0;i<2*n-1;i++) {
+                for(j=i+1;j<2*n;j++) {
+                        if(merge[i] < merge[j]) {
+
+                                temp = merge[i];
+                                merge[i] = merge[j];
+                                merge[j] = temp;
+                        }
+                }
+        }
+        printf("Descending order after merging\n");
+        for(i=0;i<2*n;i++) {
+                printf("%d\n",merge[i]);
+        }
+        return 0;
+}
+```
+## 8.Program in C to count the frequency of each element of an array.
+```c
+#include<stdio.h>
+
+int main()
+{
+        int arr[100],visited[100]={0};
+        int i,j,n,count;
+
+        printf("enter the size of an array:");
+        scanf("%d",&n);
+
+        printf("enter the %d elements:",n);
+
+        for(i=0;i<n;i++) {
+                scanf("%d",&arr[i]);
+        }
+
+        for(i=0;i<n;i++) {
+
+                if(visited[i]==1)
+
+                continue;
+
+                        count=1;
+
+                for(j=i+1;j<n;j++) {
+                        if(arr[i] == arr[j]) {
+
+                                 count++;
+
+                                 visited[j]=1;
+                        }
+                }
+
+
+                printf("%d->%d\n",arr[i],count);
+        }
+                return 0;
+        }
+```
+## 9.Program in C to find the maximum and minimum elements in an array.
+```c
+#include<stdio.h>
+
+int main()
+{
+        int arr[100];
+        int max,min,i,j,n;
+
+        printf("enter the size of the array:");
+        scanf("%d",&n);
+
+        printf("enter the %d elements:",n);
+
+        for(i=0;i<n;i++) {
+                scanf("%d",&arr[i]);
+        }
+
+         max=arr[0];
+         min=arr[0];
+
+        for(i=1;i<n;i++) {
+
+                if(arr[i] > max) {
+
+                         max=arr[i];
+
+                }if(arr[i] < min){
+
+                         min =arr[i];
+
+                }
+        }
+
+        printf("maximum=%d\n",max);
+        printf("minmum=%d\n",min);
+
+        return 0;
+}
+```
+## 10.Program in C to separate odd and even integers into separate arrays.
+```c
+#include<stdio.h>
+
+int main()
+{
+        int arr[100],even[100],odd[100];
+        int i,j,n,evencount,oddcount;
+
+        printf("enter the size of the array elements:");
+        scanf("%d",&n);
+
+        printf("enter the %d elements:",n);
+
+        for(i=0;i<n;i++) {
+                scanf("%d",&arr[i]);
+        }
+
+        for(i=0;i<n;i++) {
+                if(arr[i]%2==0) {
+
+                   even[evencount]=arr[i];
+
+                   evencount++;
+                }
+                else{
+                        odd[oddcount]=arr[i];
+
+                        oddcount++;
+                }
+        }
+
+                printf("even numbers are:");
+
+                for(i=0;i<evencount;i++) {
+
+                        printf("\n%d",even[i]);
+                }
+
+                printf("\nodd numbers are:");
+
+                for(i=0;i<oddcount;i++) {
+
+                        printf("\n%d",odd[i]);
+                }
+
+        return 0;
+}
+```
+## 11.Program in C to sort elements of an array in ascending order.
+```c
+#include<stdio.h>
+
+int main()
+{
+        int arr[100];
+        int i,j,temp,n;
+
+        printf("enter the size of array elements:");
+        scanf("%d",&n);
+
+        printf("enter the %d elements:",n);
+
+        for(i=0;i<n;i++) {
+                scanf("%d",&arr[i]);
+        }
+
+        for(i=0;i<n-1;i++) {
+                for(j=i+1;j<n;j++) {
+
+                        if(arr[i] > arr[j]) {
+
+                                temp = arr[i];
+                                arr[i] = arr[j];
+                                arr[j] = temp;
+                        }
+                }
+        }
+
+        printf("-----Ascending order is-----");
+
+        for(i=0;i<n;i++) {
+                printf(" %d  ",arr[i]);
+        }
+        printf("\n");
+        return 0;
+}
+```
+## 12.Program in C to sort the elements of the array in descending order.
+```c
+#include<stdio.h>
+
+int main()
+{
+        int arr[100];
+        int i,j,n,temp;
+
+        printf("enter the size of the array elements:");
+        scanf("%d",&n);
+
+        printf("enter %d elements:",n);
+
+        for(i=0;i<n;i++) {
+
+                scanf("%d",&arr[i]);
+        }
+
+        for(i=0;i<n-1;i++) {
+
+                for(j=i+1;j<n;j++) {
+
+                        if(arr[i] < arr[j]) {
+
+                                temp = arr[i];
+                                arr[i] = arr[j];
+                                arr[j] =temp;
+                        }
+                }
+        }
+
+        printf("-----Descending order is-----");
+
+        for(i=0;i<n;i++) {
+
+                printf(" %d  ",arr[i]);
+        }
+        printf("\n");
+        return 0;
+}
+```
+## 13.Program in C to delete an element at a desired position from an array.
+```c
+#include<stdio.h>
+
+int main()
+{
+        int arr[100];
+        int i,j,n,pos,num;
+
+        printf("enter the size of the array element:");
+        scanf("%d",&n);
+
+        printf("enter the %d elements:",n);
+
+        for(i=0;i<n;i++) {
+                scanf("%d",&arr[i]);
+        }
+
+        printf("enter the deleting position from 1 to %d:",n);
+        scanf("%d",&pos);
+
+        if(pos < 1 || pos > n) {
+
+                printf("invalid position");
+        }else {
+
+        for(i=pos-1;i<n-1;i++) {
+
+                arr[i] = arr[i+1];
+
+        }
+                n--;
+
+        printf("-----After deletion-----\n");
+
+        for(i=0;i<n;i++) {
+                printf("%d ",arr[i]);
+        }
+        }
+        printf("\n");
+
+        return 0;
+}
+```
 14. Write a program in C to find the second largest element in an array
 15. Write a program in C to find the second smallest element in an array.
 16. Write a program in C for a 2D array of size 3x3 and print the matrix.
