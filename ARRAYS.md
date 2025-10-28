@@ -500,13 +500,318 @@ int main()
         return 0;
 }
 ```
-14. Write a program in C to find the second largest element in an array
-15. Write a program in C to find the second smallest element in an array.
-16. Write a program in C for a 2D array of size 3x3 and print the matrix.
-17. Write a program in C for adding two matrices of the same size.
-18. Write a program in C for the subtraction of two matrices.
-19. Write a program in C for the multiplication of two square matrices.
-20. Write a program in C to find the transpose of a given matrix.
+## 14.Program in C to find the second largest element in an array.
+```c
+#include<stdio.h>
+
+int main()
+{
+        int arr[100],second,big;
+
+        int i,n;
+
+        printf("enter the size of the array elements:");
+        scanf("%d",&n);
+
+        printf("enter the %d elements:",n);
+
+        for(i=0;i<n;i++) {
+
+                scanf("%d",&arr[i]);
+        }
+
+        big=0;
+        second=0;
+
+        for(i=0;i<n;i++) {
+
+          if(arr[i] > big) {
+
+                second = big;
+
+                big = arr[i];
+
+        }else if(arr[i] > second) {
+
+                 second = arr[i];
+        }
+        }
+
+        printf("The second largest number is:%d\n",second);
+
+        return 0;
+}
+```
+## 15.Program in C to find the second smallest element in an array.
+```c
+#include<stdio.h>
+
+int main()
+{
+        int arr[100],small,second;
+
+        int i,n;
+
+        printf("enter the size of the array elements:");
+        scanf("%d",&n);
+
+        printf("enter %d elements:",n);
+
+        for(i=0;i<n;i++) {
+                scanf("%d",&arr[i]);
+        }
+
+        if(arr[0] < arr[1]) {
+
+                small=arr[0];
+                second=arr[1];
+        }else {
+                small=arr[1];
+                second=arr[0];
+        }
+        for(i=2;i<n;i++) {
+
+                if(arr[i] < small) {
+
+                        second = small;
+                        small = arr[i];
+                } else if(arr[i] < second && arr[i] > small) {
+
+                        second = arr[i];
+                }
+        }
+        printf("The second smallest number is:%d\n",second);
+        return 0;
+}
+```
+## 16.Program in C for a 2D array of size 3x3 and print the matrix.
+```c
+#include<stdio.h>
+
+int main()
+{
+        int arr[3][3];
+        int i,j;
+
+        printf("Enter the 3x3 matrix elements\n");
+
+        for(i=0;i<3;i++) {
+                for(j=0;j<3;j++) {
+
+                        printf("Enter the number at position [%d][%d]:",i,j);
+
+                        scanf("%d",&arr[i][j]);
+                }
+        }
+
+        printf("The 3x3 matrix is:\n");
+
+        for(i=0;i<3;i++) {
+                for(j=0;j<3;j++) {
+
+                        printf("%d\t",arr[i][j]);
+                }
+
+        printf("\n");
+      }
+
+        return 0;
+}
+```
+## 17.Program in C for adding two matrices of the same size.
+```c
+#include<stdio.h>
+
+int main()
+{
+        int a[100][100],b[100][100],sum[100][100];
+        int i,j,row,col;
+
+        printf("Enter the numbers of the rows and columns:");
+        scanf("%d %d",&row,&col);
+
+        printf("Enter the first matrix elements\n");
+
+        for(i=0;i<row;i++) {
+                for(j=0;j<col;j++) {
+
+                        scanf("%d",&a[i][j]);
+                }
+        }
+
+        printf("Enter the second matrix elements\n");
+
+        for(i=0;i<row;i++) {
+                for(j=0;j<col;j++) {
+
+                        scanf("%d",&b[i][j]);
+                }
+        }
+
+        for(i=0;i<row;i++) {
+                for(j=0;j<col;j++) {
+
+                        sum[i][j] = a[i][j] + b[i][j];
+                }
+        }
+
+        printf("The resultant matrix is:\n");
+
+        for(i=0;i<row;i++) {
+                for(j=0;j<col;j++) {
+
+                        printf("%d\t",sum[i][j]);
+                }
+                printf("\n");
+        }
+        return 0;
+}
+```
+## 18.Program in C for the subtraction of two matrices.
+```c
+#include<stdio.h>
+
+int main()
+{
+        int a[100][100],b[100][100],sub[100][100];
+        int i,j,row,col;
+
+        printf("Enter the size of the rows and columns:\n");
+        scanf("%d %d",&row,&col);
+
+        printf("Enter the first matrix elements:\n");
+
+        for(i=0;i<row;i++) {
+                for(j=0;j<col;j++) {
+
+                        scanf("%d",&a[i][j]);
+                }
+        }
+
+        printf("Enter the second matrix elements:\n");
+
+        for(i=0;i<row;i++) {
+                for(j=0;j<col;j++) {
+
+                        scanf("%d",&b[i][j]);
+                }
+        }
+
+        for(i=0;i<row;i++) {
+                for(j=0;j<col;j++) {
+
+                     sub[i][j] = a[i][j] - b[i][j];
+                }
+        }
+
+        printf("-----After subtraction of the matrices-----\n");
+
+        for(i=0;i<row;i++) {
+                for(j=0;j<col;j++) {
+
+                        printf("%d\t",sub[i][j]);
+                }
+                printf("\n");
+        }
+        return 0;
+}
+```
+## 19.Program in C for the multiplication of two square matrices.
+```c
+#include<stdio.h>
+
+int main()
+{
+        int a[10][10],b[10][10],multi[10][10];
+        int i,j,row,col;
+
+        printf("Enter the rows and column size\n");
+        scanf("%d %d",&row,&col);
+
+        printf("Enter the first matrix elements:\n");
+
+        for(i=0;i<row;i++) {
+                for(j=0;j<col;j++) {
+
+                        scanf("%d",&a[i][j]);
+                }
+        }
+
+        printf("Enter the second matrix elements\n");
+
+        for(i=0;i<row;i++) {
+                for(j=0;j<col;j++) {
+
+                        scanf("%d",&b[i][j]);
+                }
+        }
+
+        for(i=0;i<row;i++) {
+                for(j=0;j<col;j++) {
+
+                        multi[i][j] = a[i][j] * b[i][j];
+                }
+        }
+
+        printf("The resultant matrix is:\n");
+
+        for(i=0;i<row;i++) {
+                for(j=0;j<col;j++) {
+
+                        printf("%d\t",multi[i][j]);
+                }
+                printf("\n");
+        }
+
+                return 0;
+        }
+```
+## 20.Program in C to find the transpose of a given matrix.
+```c
+#include<stdio.h>
+
+int main()
+{
+        int a[100][100],trans[100][100];
+        int i,j,row,col;
+
+        printf("Enter the rows and columns size:");
+        scanf("%d %d",&row,&col);
+
+        printf("Enter the matrix elements:\n");
+
+        for(i=0;i<row;i++) {
+                for(j=0;j<col;j++) {
+
+                        scanf("%d",&a[i][j]);
+                }
+        }
+
+        printf("-----The original matrix-----\n");
+
+        for(i=0;i<row;i++) {
+                for(j=0;j<col;j++) {
+
+                        printf("%d\t",a[i][j]);
+                }
+                printf("\n");
+        }
+        printf("----- After Transposing the matrix-----\n");
+
+        for(i=0;i<col;i++) {
+                for(j=0;j<row;j++) {
+
+                        trans[i][j] = a[j][i];
+
+        printf("%d\t",trans[i][j]);
+                }
+
+        printf("\n");
+        }
+
+        return 0;
+}
+```
 21. Write a program in C to find the sum of the right diagonals of a matrix.
 22. Write a program in C to find the sum of the left diagonals of a matrix.
 23. Write a program in C to find the sum of rows and columns of a matrix.
