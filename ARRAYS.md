@@ -812,9 +812,349 @@ int main()
         return 0;
 }
 ```
-21. Write a program in C to find the sum of the right diagonals of a matrix.
-22. Write a program in C to find the sum of the left diagonals of a matrix.
-23. Write a program in C to find the sum of rows and columns of a matrix.
-24. Write a program in C to print or display the lower triangular of a given matrix.
-25. Write a program in C to print or display an upper triangular matrix.
-26. Write a program in C to calculate the determinant of a 3 x 3 matrix
+## 21.Program in C to find the sum of the right diagonals of a matrix.
+```c
+#include<stdio.h>
+
+int main()
+{
+        int arr[100][100];
+
+        int i,j,n,sum=0;
+
+        printf("Enter the array size");
+        scanf("%d",&n);
+
+        printf("Enter the %d x %d matrix\n",n,n);
+
+        for(i=0;i<n;i++) {
+                for(j=0;j<n;j++) {
+
+                        scanf("%d",&arr[i][j]);
+                }
+        }
+
+        printf("The matrix is\n");
+
+        for(i=0;i<n;i++) {
+                for(j=0;j<n;j++) {
+
+                        printf("%d\t",arr[i][j]);
+                }
+                printf("\n");
+        }
+
+        printf("The right daigonal is:\n");
+
+        for(i=0;i<n;i++) {
+                for(j=0;j<n;j++) {
+
+                        if(i+j == n-1) {
+
+                        printf("%d\n",arr[i][j]);
+                        }
+                }
+        }
+
+        for(i=0;i<n;i++) {
+                for(j=0;j<n;j++) {
+
+                        if(i+j == n-1) {
+
+                                sum = sum + arr[i][j];
+                        }
+                }
+        }
+        printf("The sum of right diagonal is:%d\n",sum);
+
+        return 0;
+}
+```
+## 22.Program in C to find the sum of the left diagonals of a matrix.
+```c
+#include<stdio.h>
+
+int main()
+{
+        int arr[100][100];
+
+        int i,j,n,sum=0;
+
+        printf("Enter the array size:");
+        scanf("%d",&n);
+
+        printf("Enter %d x %d matrix\n",n,n);
+
+        for(i=0;i<n;i++) {
+                for(j=0;j<n;j++) {
+
+                        scanf("%d",&arr[i][j]);
+                }
+        }
+
+        printf("The matrix is:\n");
+
+        for(i=0;i<n;i++) {
+                for(j=0;j<n;j++) {
+
+                        printf("%d\t",arr[i][j]);
+                }
+                printf("\n");
+        }
+
+        printf("The left diagonal is:\n");
+
+        for(i=0;i<n;i++) {
+                for(j=0;j<n;j++) {
+
+                        if(i == j) {
+
+                                printf("%d\n",arr[i][j]);
+
+                        }
+                }
+        }
+
+         for(i=0;i<n;i++) {
+                for(j=0;j<n;j++) {
+
+                        if(i == j) {
+
+                            sum = sum + arr[i][j];
+
+                        }
+                }
+        }
+         printf("The sum of the left diagonal is:%d\n",sum);
+
+         return 0;
+}
+```
+## 23.Program in C to find the sum of rows and columns of a matrix.
+```c
+#include<stdio.h>
+
+int main()
+{
+        int arr[100][100];
+
+        int i,j,n,sum=0;
+
+        printf("Enter the array size:");
+        scanf("%d",&n);
+
+        printf("Enter %d x %d matrix\n",n,n);
+
+        for(i=0;i<n;i++) {
+                for(j=0;j<n;j++) {
+
+                        scanf("%d",&arr[i][j]);
+                }
+        }
+
+        printf("The matrix is:\n");
+
+        for(i=0;i<n;i++) {
+                for(j=0;j<n;j++) {
+
+                        printf("%d\t",arr[i][j]);
+                }
+                printf("\n");
+        }
+
+        printf("The left diagonal is:\n");
+
+        for(i=0;i<n;i++) {
+                for(j=0;j<n;j++) {
+
+                        if(i == j) {
+
+                                printf("%d\n",arr[i][j]);
+
+                        }
+                }
+        }
+
+         for(i=0;i<n;i++) {
+                for(j=0;j<n;j++) {
+
+                        if(i == j) {
+
+                            sum = sum + arr[i][j];
+
+                        }
+                }
+        }
+         printf("The sum of the left diagonal is:%d\n",sum);
+
+         return 0;
+}
+```
+## 24.Program in C to print or display the lower triangular of a given matrix.
+```c
+#include<stdio.h>
+
+int main()
+{
+        int arr[100][100];
+        int i,j,n;
+
+        printf("Enter the array size:");
+        scanf("%d",&n);
+
+        printf("Enter the %d x %d matrix\n",n,n);
+
+        for(i=0;i<n;i++) {
+                for(j=0;j<n;j++) {
+
+                        scanf("%d",&arr[i][j]);
+                }
+        }
+
+        printf("The matrix is\n");
+
+        for(i=0;i<n;i++) {
+                for(j=0;j<n;j++) {
+
+                        printf("%d\t",arr[i][j]);
+                }
+                printf("\n");
+        }
+
+        printf("The lower matrix is\n");
+
+        for(i=0;i<n;i++) {
+                for(j=0;j<n;j++) {
+
+                        if(i>=j)
+                                printf("%d\t",arr[i][j]);
+                        else
+                                printf("\t");
+
+                }
+                        printf("\n");
+        }
+        return 0;
+}
+```
+## 25.Program in C to print or display an upper triangular matrix.
+```c
+#include<stdio.h>
+
+int main()
+{
+        int arr[100][100];
+        int i,j,n;
+
+        printf("Eter the matrix size:");
+        scanf("%d",&n);
+
+        printf("Enter the %d x %d matrix\n",n,n);
+
+        for(i=0;i<n;i++) {
+                for(j=0;j<n;j++) {
+                        scanf("%d",&arr[i][j]);
+                }
+        }
+
+        printf("The matrix is\n");
+
+        for(i=0;i<n;i++) {
+                for(j=0;j<n;j++) {
+
+                        printf("%d\t",arr[i][j]);
+                }
+                printf("\n");
+        }
+
+        printf("The upper matrix is\n");
+
+        for(i=0;i<n;i++) {
+                for(j=0;j<n;j++) {
+
+                        if(i<=j)
+                printf("%d\t",arr[i][j]);
+        else
+
+                printf("\t");
+                }
+               printf("\n");
+        }
+
+       return 0;
+}
+```
+## 26.Program in C to calculate the determinant of a 3 x 3 matrix.
+```c
+#include<stdio.h>
+
+int main()
+{
+
+        int a[3][3];
+        int i,j,det;
+
+        printf("Etnter the 3 x 3 matrix\n");
+
+
+
+        for(i=0;i<3;i++) {
+                for(j=0;j<3;j++) {
+
+                        scanf("%d",&a[i][j]);
+                }
+        }
+
+         printf("The 3 x 3 matrix is\n");
+
+         for(i=0;i<3;i++) {
+                 for(j=0;j<3;j++) {
+
+                         printf("%d\t",a[i][j]);
+                 }
+                 printf("\n");
+         }
+
+                          det = a[0][0]*(a[1][1]*a[2][2] - a[1][2]*a[2][1])
+                               -a[0][1]*(a[1][0]*a[2][2] - a[1][2]*a[2][0])
+                               +a[0][2]*(a[1][0]*a[2][1] - a[1][1]*a[2][0]);
+
+
+
+           printf("Determinat is=%d\n",det);
+
+           return 0;
+}
+```
+27. Write a program in C to accept two matrices and check whether they are equal.
+28. Write a program in C to find the majority element of an array.
+(A majority element in an array A[] of size n is an element that appears more than n/2 times 
+(and hence there is at most one such element).
+29. Write a program in C to find the missing number in a given array. There are no duplicates in 
+the list.
+30. Write a program in C to find the two repeating elements in a given array.
+31. Write a program to check if a given element is present in an array.
+32. Create a function to calculate the average of elements in an array
+33. Write a program to count the number of even and odd elements in an array.
+34. Implement a function to reverse the elements of an array.
+35. Implement a function to delete an element at a specific position in an array.
+36. Write a function to find the product of all elements in an array.
+37. Print Square of Array Elements in C
+38. Print Ascii Values using Array in C
+39. C Program To Find Two Elements whose Sum is Closest to Zero
+40. C Program to Find Union and Intersection of Two Arrays
+41. C Program to Print all Non Repeated Elements in an Array
+42. Write a program to write all the elements of 2-D Array into !-D Array in row wise.
+43. Write a program to write whether a matrix is symmetric or not
+44. Write a program to check if elements of an array are distinct or not.
+ 45.Write a program to remove duplicate elements from a sorted array.
+37. Write a program to find out whether a square matrix is symmetric or not. A square matrix is 
+symmetric if the transpose of the matrix is equal to the matrix.
+38. Write a recursive function to find the sum of all even numbers in an array.
+39. Write a recursive function that finds the sum of all elements of an array by repeatedly 
+partitioning it into two almost equal parts.
+40. Write a recursive function to reverse the elements of an array..
+41. Write a recursive function to find whether the elements of an array are in strict ascending 
+order or not.
+42. Write a program to find the sum of rows and columns of a 2-d array and store the sums in 
+the same array
