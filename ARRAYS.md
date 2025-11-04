@@ -1126,21 +1126,494 @@ int main()
            return 0;
 }
 ```
-27. Write a program in C to accept two matrices and check whether they are equal.
-28. Write a program in C to find the majority element of an array.
-(A majority element in an array A[] of size n is an element that appears more than n/2 times 
-(and hence there is at most one such element).
-29. Write a program in C to find the missing number in a given array. There are no duplicates in 
-the list.
-30. Write a program in C to find the two repeating elements in a given array.
-31. Write a program to check if a given element is present in an array.
-32. Create a function to calculate the average of elements in an array
-33. Write a program to count the number of even and odd elements in an array.
-34. Implement a function to reverse the elements of an array.
-35. Implement a function to delete an element at a specific position in an array.
-36. Write a function to find the product of all elements in an array.
-37. Print Square of Array Elements in C
-38. Print Ascii Values using Array in C
+## 27.Program in C to accept two matrices and check whether they are equal.
+```c
+#include<stdio.h>
+
+int main()
+{
+        int a[100][100],b[100][100];
+        int i,j,row,col,flag=1;
+
+        printf("Enter the row and column size\n");
+        scanf("%d %d",&row,&col);
+
+        printf("Enter the first matrix elements\n");
+        for(i=0;i<row;i++) {
+                for(j=0;j<col;j++) {
+
+                        scanf("%d",&a[i][j]);
+                }
+        }
+
+        printf("Enter the second matrix elements\n");
+
+        for(i=0;i<row;i++) {
+                for(j=0;j<col;j++) {
+
+                        scanf("%d",&b[i][j]);
+                }
+        }
+
+        printf("The first matrix is\n");
+
+        for(i=0;i<row;i++) {
+                for(j=0;j<col;j++) {
+
+                        printf("%d\t",a[i][j]);
+                }
+                printf("\n");
+        }
+
+        printf("The second matrix is\n");
+
+        for(i=0;i<row;i++) {
+                for(j=0;j<col;j++) {
+
+                        printf("%d\t",b[i][j]);
+                }
+                printf("\n");
+        }
+
+        for(i=0;i<row;i++) {
+                for(j=0;j<col;j++) {
+
+                        if(a[i][j] != b[i][j]) {
+
+                                flag=0;
+                                break;
+                        }
+                }
+
+                if(flag==0)
+                        break;
+        }
+
+                        if(flag==1) {
+
+                        printf("Both matrices are equal\n");
+
+                        }else{
+                                printf("Both matrices are not equal\n");
+                        }
+
+        return 0;
+}
+```
+## 28.Program in C to find the majority element of an array.(A majority element in an array A[] of size n is an element that appears more than n/2 times (and hence there is at most one such element).
+```c
+#include<stdio.h>
+
+int main()
+{
+        int arr[100];
+        int i,j,n,count,found;
+
+        printf("enter the array size:");
+        scanf("%d",&n);
+
+        printf("Enter the %d elements\n",n);
+
+        for(i=0;i<n;i++) {
+                        scanf("%d",&arr[i]);
+                }
+
+        printf("The elements are:\n");
+
+        for(i=0;i<n;i++) {
+
+                        printf("%d\n",arr[i]);
+                }
+
+        found=0;
+
+        for(i=0;i<n;i++) {
+                count=0;
+                for(j=0;j<n;j++) {
+
+                        if(arr[i] == arr[j]) {
+
+                                count++;
+
+                        }
+                }
+
+        if(count > n/2) {
+
+                printf("The majority element is:%d\n",arr[i]);
+
+                found=1;
+                break;
+        }
+        }
+
+        if(!found) {
+
+                printf("No majority elemnet is found\n");
+        }
+
+        return 0;
+}
+```
+## 29.Program in C to find the missing number in a given array. There are no duplicates in the list.
+```c
+#include<stdio.h>
+
+int main()
+{
+        int arr[100],sum=0,missing;
+        int i,n,total;
+
+        printf("Enter the n number");
+        scanf("%d",&n);
+
+        printf("Enter the %d number from 1 to %d",n-1,n);
+
+        for(i=0;i<n-1;i++) {
+                scanf("%d",&arr[i]);
+
+                 sum+=arr[i];
+        }
+
+        total = n*(n+1)/2;
+        missing = total - sum;
+
+        printf("The missing number is:%d",missing);
+
+        return 0;
+}
+```
+## 30.Program in C to find the two repeating elements in a given array.
+```c
+#include<stdio.h>
+
+int main()
+{
+        int arr[100];
+        int i,j,n;
+
+        printf("Enter the array size:");
+
+        scanf("%d",&n);
+
+        printf("Enter %d elements\n",n);
+
+        for(i=0;i<n;i++) {
+                scanf("%d",&arr[i]);
+        }
+
+        printf("The repeated  elements are\n");
+
+        for(i=0;i<n;i++) {
+                for(j=i+1;j<n;j++) {
+
+                        if(arr[i]==arr[j]) {
+                                printf("%d\n",arr[i]);
+                        }
+                }
+        }
+        return 0;
+}
+```
+## 31.Program to check if a given element is present in an array.
+```c
+#include<stdio.h>
+
+int main()
+{
+        int arr[100];
+
+        int i,j,n,search,found=0;
+
+        printf("Enter the array size\n");
+        scanf("%d",&n);
+
+        printf("Enter %d  elements\n",n);
+
+        for(i=0;i<n;i++) {
+                scanf("%d",&arr[i]);
+        }
+
+        printf("Enter the number for searching\n");
+        scanf("%d",&search);
+
+        for(i=0;i<n;i++) {
+
+                if( arr[i] == search) {
+
+                        found =1;
+                }
+        }
+
+        if(found==1) {
+                printf("Number is present in an array\n");
+        }
+        else {
+                printf("Nuber is not present in an array\n");
+        }
+        return 0;
+}
+
+```
+## 32.Function to calculate the average of elements in an array.
+```c
+#include<stdio.h>
+
+
+        float findaverage( int arr[],int n)
+        {
+        int sum=0;
+        for(int i=0;i<n;i++) {
+
+                sum+=arr[i];
+        }
+
+        return (float)sum/n;
+        }
+
+int main()
+{
+        int arr[100],i,n;
+        float avg;
+
+        printf("Enter the array size:");
+        scanf("%d",&n);
+
+        printf("Enter %d elements\n",n);
+
+        for(i=0;i<n;i++) {
+
+                scanf("%d",&arr[i]);
+        }
+        avg = findaverage(arr,n);
+
+        printf("The average of array is :%.2f\n",avg);
+
+        return 0;
+}
+
+```
+## 33.Program to count the number of even and odd elements in an array.
+```c
+#include<stdio.h>
+
+int main()
+{
+        int arr[100],even=0,odd=0;
+        int i,n,count;
+
+        printf("Enter the array size:");
+        scanf("%d",&n);
+
+        printf("Enter %d elements\n",n);
+
+        for(i=0;i<n;i++) {
+
+                scanf("%d",&arr[i]);
+        }
+
+        for(i=0;i<n;i++) {
+
+                if(arr[i]%2==0) {
+
+                        even++;
+                }
+                else{
+                        odd++;
+                }
+        }
+
+                printf("The number of even numbers are:%d\n",even);
+                printf("the number of odd numbers are:%d\n",odd);
+        return 0;
+}
+```
+## 34. Implement a function to reverse the elements of an array.
+```c
+#include<stdio.h>
+
+    void reverse (int arr[],int n)
+{
+
+        int start=0,end=n-1;
+        int temp;
+
+        while(start<end) {
+
+                temp = arr[start];
+
+                arr[start] = arr[end];
+
+                arr[end] = temp;
+
+                start++;
+                end--;
+        }
+}
+
+int main()
+{
+        int arr[100];
+        int i,n;
+
+        printf("Enter the array size:");
+        scanf("%d",&n);
+
+        printf("Enter %d elements\n",n);
+
+        for(i=0;i<n;i++) {
+                scanf("%d",&arr[i]);
+        }
+
+        reverse(arr,n);
+
+        printf("After reversing the array\n");
+
+        for(i=0;i<n;i++) {
+
+                printf("%d\t",arr[i]);
+        }
+        printf("\n");
+        return 0;
+}
+```
+## 35. Implement a function to delete an element at a specific position in an array.
+```c
+#include<stdio.h>
+
+void deleteElement(int arr[],int *n,int pos)
+{
+        int i;
+
+        if(pos<1 || pos>*n) {
+                printf("Invalid position\n");
+
+                return ;
+        }
+
+       for(i=pos-1;i<*n-1;i++) {
+
+               arr[i] = arr[i+1];
+       }(*n)--;
+}
+
+int main()
+{
+        int arr[100];
+        int i,n,pos;
+
+        printf("Enter the array size:");
+        scanf("%d",&n);
+
+        printf("Enter %d elements\n",n);
+
+        for(i=0;i<n;i++) {
+                scanf("%d",&arr[i]);
+        }
+
+        printf("Enter the position of deletion from 1 to %d\n",n);
+        scanf("%d",&pos);
+
+        deleteElement(arr,&n,pos);
+
+        printf("-----After deletion-----\n");
+
+        for(i=0;i<n;i++) {
+                printf("%d\n",arr[i]);
+        }
+
+        return 0;
+}
+```
+## 36.Function to find the product of all elements in an array.
+```c
+#include<stdio.h>
+
+int findproduct(int arr[],int n)
+{
+        int i,product=1;
+
+        for(i=0;i<n;i++) {
+
+                product = product * arr[i];
+        }
+        return product;
+}
+
+int main()
+{
+        int i,n,arr[200];
+        int result;
+
+        printf("Enter the array size:");
+        scanf("%d",&n);
+
+        printf("Enter %d elements\n",n);
+
+        for(i=0;i<n;i++) {
+
+                scanf("%d",&arr[i]);
+        }
+
+        result =findproduct(arr,n);
+
+        for(i=0;i<n;i++) {
+
+
+        }printf("The product of elements of an array is:%d\n",result);
+
+
+        return 0;
+}
+```
+## 37. Print Square of Array Elements in C.
+```c
+#include<stdio.h>
+
+int main()
+{
+        int arr[100];
+        int i,n,square[100];
+
+        printf("Enter the array size:");
+        scanf("%d",&n);
+
+        printf("Enter %d elements\n",n);
+
+        for(i=0;i<n;i++) {
+
+                scanf("%d",&arr[i]);
+        }
+
+        printf("The square of an array is\n");
+
+        for(i=0;i<n;i++) {
+
+                square[i] = arr[i] * arr[i];
+                 printf("%d\n",square[i]);
+        }
+        return 0;
+}
+```
+## 38. Print Ascii Values using Array in C.
+```c
+#include<stdio.h>
+
+int main()
+{
+        int str[100];
+        int i;
+
+        printf("Enter the string\n");
+        scanf("%ls",str);
+
+        for(i=0;str[i]!='\0';i++) {
+                printf("The ASCII value of %c is %d\n",str[i],str[i]);
+        }
+
+        return 0;
+}
+```
 39. C Program To Find Two Elements whose Sum is Closest to Zero
 40. C Program to Find Union and Intersection of Two Arrays
 41. C Program to Print all Non Repeated Elements in an Array
