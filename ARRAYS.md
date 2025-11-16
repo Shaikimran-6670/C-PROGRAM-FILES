@@ -1614,9 +1614,142 @@ int main()
         return 0;
 }
 ```
-39. C Program To Find Two Elements whose Sum is Closest to Zero
-40. C Program to Find Union and Intersection of Two Arrays
-41. C Program to Print all Non Repeated Elements in an Array
+## 39.Program To Find Two Elements whose Sum is Closest to Zero.
+```c
+#include<stdio.h>
+#include<stdlib.h>
+
+int compare(const void *a,const void *b) {
+
+        return(*(int*)a - *(int*)b);
+}
+
+int main()
+{
+        int arr[100];
+        int i,left,right;
+        int min_left,min_right,min_sum;
+        int sum,n;
+
+        printf("Enter the number of elements:");
+        scanf("%d",&n);
+
+        printf("Enter %d elements\n",n);
+
+        for(i=0;i<n;i++) {
+
+                scanf("%d",&arr[i]);
+        }
+
+        qsort(arr,n,sizeof(int),compare);
+
+        left=0;
+        right=n-1;
+
+        while(left < right) {
+
+                sum = arr[left] +arr[right];
+
+                if(sum <min_sum) {
+
+                min_sum = sum;
+                min_left = left;
+                min_right = right;
+                }
+
+                if(sum < 0)
+
+                        left++;
+                        else
+                                right--;
+        }
+
+        printf("The two elements closest to zero are : %d and %d\n",arr[min_left],arr[min_right]);
+
+        return 0;
+}
+```
+## 40.Program to Find Union and Intersection of Two Arrays.
+```c
+#include<stdio.h>
+
+int main()
+{
+        int a[100],b[100],uni[100],inter[100];
+
+        int m,n,i,j,k=0,l=0,found;
+
+        printf("Enter the first array size:");
+        scanf("%d",&m);
+
+        printf("Enter %d elements\n",m);
+
+        for(i=0;i<m;i++) {
+
+                scanf("%d",&a[i]);
+        }
+
+        printf("Enter the second array size:");
+        scanf("%d",&n);
+
+        printf("Enter %d elements\n",n);
+
+        for(i=0;i<n;i++) {
+
+                scanf("%d",&b[i]);
+        }
+
+        for(i=0;i<m;i++)
+
+                uni[k++] = a[i];
+
+        for(i=0;i<n;i++) {
+                found=0;
+
+                for(j=0;j<m;j++){
+
+                if(b[i] == a[j]) {
+                        found=1;
+                        break;
+                }
+                }
+
+                if(found==0)
+
+                        uni[k++]=b[i];
+                }
+
+                for(i=0;i<m;i++) {
+                        for(j=0;j<n;j++) {
+
+                                if(a[i] == b[j]) {
+
+                                        inter[l++] = a[i];
+                                        break;
+
+                                }
+                        }
+                }
+
+                printf("The union is\n");
+
+                for(i=0;i<k;i++) {
+
+                        printf(" %d \n",uni[i]);
+                }
+
+                printf("The intersection is:");
+                for(i=0;i<l;i++) {
+                        printf("%d\n",inter[i]);
+                }
+
+
+                return 0;
+}
+```
+## 41.Program to Print all Non Repeated Elements in an Array.
+```c
+
 42. Write a program to write all the elements of 2-D Array into !-D Array in row wise.
 43. Write a program to write whether a matrix is symmetric or not
 44. Write a program to check if elements of an array are distinct or not.
