@@ -1749,8 +1749,49 @@ int main()
 ```
 ## 41.Program to Print all Non Repeated Elements in an Array.
 ```c
+#include<stdio.h>
 
-42. Write a program to write all the elements of 2-D Array into !-D Array in row wise.
+int main()
+{
+        int arr[100];
+        int i,j,n,found=0;
+
+        printf("Enter the array size:");
+
+        scanf("%d",&n);
+
+        printf("Enter %d elements\n",n);
+
+        for(i=0;i<n;i++) {
+                scanf("%d",&arr[i]);
+        }
+
+        for(i=0;i<n;i++) {
+                for(j=i+1;j<n;j++) {
+
+                        if(arr[i]==arr[j]) {
+
+                                if(found==0) {
+                                printf("The repeated elements are\n");
+
+                                }
+
+                                printf("%d\n",arr[i]);
+                                found=1;
+                                break;
+                        }
+                }
+        }
+
+        if(found==0) {
+
+                printf("There are no repeated elements\n");
+}
+
+        return 0;
+}
+```
+## 42.Program to write all the elements of 2-D Array into !-D Array in row wise.
 43. Write a program to write whether a matrix is symmetric or not
 44. Write a program to check if elements of an array are distinct or not.
  45.Write a program to remove duplicate elements from a sorted array.
