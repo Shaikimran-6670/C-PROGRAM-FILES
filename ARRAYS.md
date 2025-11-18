@@ -1792,9 +1792,197 @@ int main()
 }
 ```
 ## 42.Program to write all the elements of 2-D Array into !-D Array in row wise.
-43. Write a program to write whether a matrix is symmetric or not
-44. Write a program to check if elements of an array are distinct or not.
- 45.Write a program to remove duplicate elements from a sorted array.
+```c
+#include<stdio.h>
+
+int main()
+{
+        int i,j;
+        int row,col;
+
+        printf("Enter the row size:");
+        scanf("%d",&row);
+
+        printf("Enter the column size:");
+        scanf("%d",&col);
+
+        int arr2D[row][col];
+        int arr1D[row*col];
+        int index=0;
+
+        printf("Enter %d elements\n",row*col);
+
+        for(i=0;i<row;i++) {
+                for(j=0;j<col;j++) {
+
+                        scanf("%d",&arr2D[i][j]);
+                }
+        }
+
+        for(i=0;i<row;i++) {
+                for(j=0;j<col;j++) {
+
+                        arr1D[index] = arr2D[i][j];
+
+                        index++;
+                }
+        }
+
+        printf("The 1D array is\n");
+
+        for(i=0;i<row*col;i++) {
+
+                printf("%d ",arr1D[i]);
+        }
+        printf("\n");
+
+        return 0;
+}
+```
+## 43.Program to write wheather a matrix is symmetric or not.
+```c
+#include<stdio.h>
+
+int main()
+{
+        int i,j,row,col;
+
+        printf("Enter the row size:");
+        scanf("%d",&row);
+
+        printf("Enter the column size:");
+        scanf("%d",&col);
+
+        if(row != col) {
+
+                printf("This not symmetric, it should be square matrix\n");
+
+                return 0;
+        }
+
+        int a[row][col];
+
+        printf("Enter %d elements:",row*col);
+
+        for(i=0;i<row;i++) {
+                for(j=0;j<col;j++) {
+
+                        scanf("%d",&a[i][j]);
+                }
+        }
+
+        for(i=0;i<row;i++) {
+                for(j=0;j<col;j++) {
+
+                        if(a[i][j] != a[j][i]) {
+
+                                printf("Not Symmetric matrix\n");
+
+                                return 0;
+                        }
+
+                }
+        }
+
+        printf("Symmetric matrix\n");
+
+        return 0;
+}
+```
+## 44. Write a program to check if elements of an array are distinct or not.
+```c
+#include<stdio.h>
+
+int main()
+{
+        int i,j,n;
+
+        printf("Enter the array size:");
+        scanf("%d",&n);
+
+        int a[n];
+
+        printf("Enter %d elements:",n);
+
+        for(i=0;i<n;i++) {
+
+                scanf("%d",&a[n]);
+        }
+
+        for(i=0;i<n;i++) {
+                for(j=i+1;j<n;j++) {
+
+                        if(a[i] == a[j]) {
+
+                                printf("Elements are not Distinct\n");
+
+                                return 0;
+                        }
+                }
+        }
+
+        printf("All elements are Distinct\n");
+
+        return 0;
+}
+```
+## 45.Program to remove duplicate elements from a sorted array.
+```c
+#include<stdio.h>
+
+int main()
+{
+        int a[100],temp[100];
+        int i,j,n;
+
+        printf("Enter the array size:");
+        scanf("%d",&n);
+
+        printf("Enter %d elements\n",n);
+
+        for(i=0;i<n;i++) {
+                scanf("%d",&a[i]);
+        }
+
+        for(i=0;i<n;i++) {
+                for(j=i+1;j<n;j++) {
+                        if(a[i] > a[j]) {
+
+                                int t = a[i];
+
+                                a[i] = a[j];
+
+                                a[j] = t;
+                        }
+                }
+        }
+
+        j=0;
+
+        temp[j++] = a[0];
+
+        for(i=1;i<n;i++) {
+
+                if(a[i] != a[i-1]) {
+
+                        temp[j++] = a[i];
+
+                }
+        }
+
+        printf("After removing duplicate elements\n");
+
+        for(i=0;i<j;i++) {
+
+        printf("%d ",temp[i]);
+
+        }
+
+        printf("\n");
+
+        return 0;
+}
+```
 37. Write a program to find out whether a square matrix is symmetric or not. A square matrix is 
 symmetric if the transpose of the matrix is equal to the matrix.
 38. Write a recursive function to find the sum of all even numbers in an array.
